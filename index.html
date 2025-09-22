@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚜️ Premium Payment ⚜️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(-45deg, #FFD700, #B8860B, #DAA520, #8B7500);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      text-align: center;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, .card {
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px gold, 0 0 30px orange;
+      animation-delay: 0.3s;
+      position: relative;
+      z-index: 2;
+    }
+    .card {
+      background: rgba(0,0,0,0.6);
+      border: 2px solid gold;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 0 20px gold;
+      animation-delay: 0.6s;
+      position: relative;
+      z-index: 2;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 15px;
+      margin: 10px;
+      border: 2px solid gold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px gold, 0 0 40px #ffcc00, 0 0 60px orange;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+    li {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    /* ✦ Efek Bintang ✦ */
+    .star {
+      position: absolute;
+      font-size: 1.5rem;
+      color: gold;
+      text-shadow: 0 0 10px gold, 0 0 20px orange;
+      animation: twinkle 2s infinite, rotate 6s linear infinite;
+      z-index: 1;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg) scale(1); }
+      to { transform: rotate(360deg) scale(1.2); }
+    }
+    .star.s1 { top: 10px; left: 10%; animation-delay: 0s; }
+    .star.s2 { top: 20px; right: 15%; animation-delay: 0.5s; }
+    .star.s3 { bottom: 20px; left: 20%; animation-delay: 1s; }
+    .star.s4 { bottom: 30px; right: 25%; animation-delay: 1.5s; }
+
+    /* ✦ Efek Hujan Emas ✦ */
+    .gold {
+      position: fixed;
+      top: -20px;
+      color: gold;
+      font-size: 18px;
+      text-shadow: 0 0 8px #FFD700, 0 0 15px orange;
+      animation: fall linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Bintang dekorasi -->
+  <div class="star s1">✦</div>
+  <div class="star s2">✦</div>
+  <div class="star s3">✦</div>
+  <div class="star s4">✦</div>
+
+  <h1>⚜️ ✦ PREMIUM PAYMENT ✦ ⚜️</h1>
+
+  <div class="card">
+    <h2>❖ E-WALLET ❖</h2>
+    <p>✪ Dana : <b>085706645429</b></p>
+    <p>✦ QRIS (Klik untuk bayar via WA) ✦</p>
+
+    <a href="https://wa.me/p/31389360454044682/6285187505482" target="_blank" onclick="playCash()">
+      <img src="https://files.catbox.moe/nh45yl.jpg" alt="QRIS 1">
+    </a>
+
+    <a href="https://wa.me/p/31389360454044682/6285187505482" target="_blank" onclick="playCash()">
+      <img src="https://files.catbox.moe/rsfcjy.jpeg" alt="QRIS 2">
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>✧ PRICE LIST FEE ✧</h2>
+    <ul>
+      <li>💠 1k – 50k : 1k</li>
+      <li>💠 51k – 100k : 2k</li>
+      <li>💠 101k – 200k : 3k</li>
+      <li>💠 201k – 400k : 4k</li>
+      <li>💠 401k – 600k : 5k</li>
+      <li>💠 601k – 700k : 6k</li>
+      <li>💠 701k – 900k : 7k</li>
+      <li>💠 901k – 1jt : 10k</li>
+      <li>💠 1jt – 2jt : 20k</li>
+      <li>💠 2jt – 10jt : 1.5%</li>
+    </ul>
+    <p style="font-size:0.9rem;">
+      ⚠️ Tambahan Fee:<br>
+      +5k MC Pending/Delay<br>
+      +5k All Reff (tanpa perjanjian = NO REFF)<br>
+      ❌ TRX Cancel → Fee tetap terpotong
+    </p>
+  </div>
+
+  <!-- Audio Suara Cash -->
+  <audio id="cashSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_50a7f3e076.mp3?filename=money-cash-register-purchase-81961.mp3"></audio>
+
+  <script>
+    function playCash() {
+      document.getElementById('cashSound').play();
+    }
+
+    // Efek hujan emas ✨
+    function createGold() {
+      const gold = document.createElement('div');
+      gold.classList.add('gold');
+      gold.innerText = '✦';
+      gold.style.left = Math.random() * 100 + 'vw';
+      gold.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      document.body.appendChild(gold);
+
+      setTimeout(() => {
+        gold.remove();
+      }, 6000);
+    }
+
+    setInterval(createGold, 300);
+  </script>
+</body>
+</html>
